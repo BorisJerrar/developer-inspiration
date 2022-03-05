@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+align-items: center;
+justify-content: center;
+.breadcrumb-container{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+
+
+.breadcrumb-animation-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 8vw;
+  will-change: scroll-position;
+  @media (max-width: 855px) {
+    min-height: 16vw;
+  }
+  .breadcrumb-animation-1,
+  .breadcrumb-animation-7 {
+    background: #504746;
+    height: 6px;
+    width: 30%;
+    z-index: 1;
+    position: relative;
+    @media (max-width: 855px) {
+      width: 10%;
+    }
+  }
+
+  .breadcrumb-animation-1 {
+    animation: breadcrumb-from-left 0.4s;
+  }
+  .breadcrumb-animation-7 {
+    animation: breadcrumb-from-left 0.4s;
+  }
+  .breadcrumb-animation-3,
+  .breadcrumb-animation-5 {
+    animation-name: breadcrumb-from-left;
+    animation-duration: 0.4s;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 855px) {
+      width: 16%;
+    }
+  }
+  .breadcrumb-animation-2,
+  .breadcrumb-animation-4,
+  .breadcrumb-animation-6 {
+    animation-name: breadcrumb-from-left-sm-img;
+    animation-duration: 0.8s;
+  }
+  .breadcrumb-animation-2,
+  .breadcrumb-animation-4,
+  .breadcrumb-animation-6 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 4px 17px rgba(0, 0, 0, 0.7));
+    border-radius: 28px;
+    z-index: 10;
+    height: 70px;
+    @media (max-width: 855px) {
+      width: 16%;
+    }
+    p {
+      position: absolute;
+      bottom: -80px;
+      right: 0px;
+      left: 0px;
+      margin: auto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      white-space: nowrap;
+      transition: filter 3s ease-in;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 855px) {
+        font-size: 8px;
+        bottom: -40px;
+      }
+    }
+    img {
+      transition: all 0.2s ease-in;
+      width: 8vw;
+    }
+  }
+  .breadcrumb-animation-3,
+  .breadcrumb-animation-5 {
+    background: #504746;
+    height: 6px;
+    width: 8%;
+    @media (max-width: 855px) {
+      width: 16%;
+    }
+  }
+}
+.breadcrumb-animation-6 {
+  p {
+    color: #B6244F !important;
+  }
+}
+.breadcrumb-link {
+  margin-top: 180px;
+  @media (max-width: 855px) {
+    margin-top: 70px;
+  }
+}}}
+
+@keyframes breadcrumb-from-left {
+  0% {
+    transform-origin: left;
+    transform: scale(0);
+  }
+  100% {
+    transform-origin: left;
+    transform: scale(1);
+  }
+}
+@keyframes breadcrumb-from-left-sm-img {
+  0% {
+    transform-origin: center;
+    transform: scale(0);
+  }
+  50% {
+    transform-origin: center;
+    transform: scale(1.3);
+  }
+  100% {
+    transform-origin: center;
+    transform: scale(1);
+  }
+}
