@@ -14,16 +14,16 @@ function App() {
         glareMaxOpacity={0.5}
         glareColor="white"
         glarePosition="bottom"
-        className="key-number-series-card-def"
+        className="card-container"
         >
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.instagram.com/developerinspiration/"
-          className="key-number-series-card-image-def"
+          className="card-main-image"
           >
           <img
-            className="key-number-series-card-main-image-def"
+            className="card-main-image-img"
             src="/images/cover.png"
             alt="main cover of a developer inspiration article card"
             />
@@ -32,24 +32,24 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.instagram.com/developerinspiration/"
-          className="key-number-series-informations-container-def"
+          className="card-informations-container"
           >
           <img
-            className="key-number-series-informations-background-def"
+            className="card-informations-background"
             src="/images/cover.png"
             alt="blured cover of a developer inspiration article card"
             />
 
-          <p className="key-number-series-card-title-def">
+          <p className="card-informations-title">
             Developer Inspiration
           </p>
-          <div className="key-number-series-card-details-def">
-            <p className="key-number-series-card-header-mention-def">
+          <div className="card-informations-details">
+            <p className="card-informations-time-paragraph">
               Time to read this article
             </p>
-            <p className="key-number-series-card-age-def">3min</p>
+            <p className="card-informations-time">3min</p>
           </div>
-          <p className="key-number-series-card-description-def">
+          <p className="card-informations-description">
             This is a card with a glare and tilt effect. Here we could put a
             little description
           </p>
