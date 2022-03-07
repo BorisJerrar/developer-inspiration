@@ -15,34 +15,32 @@ function App() {
         glareColor="white"
         glarePosition="bottom"
         className="card-container"
-        >
+      >
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.instagram.com/developerinspiration/"
           className="card-main-image"
-          >
+        >
           <img
             className="card-main-image-img"
             src="/images/cover.png"
             alt="main cover of a developer inspiration article card"
-            />
+          />
         </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.instagram.com/developerinspiration/"
           className="card-informations-container"
-          >
+        >
           <img
             className="card-informations-background"
             src="/images/cover.png"
             alt="blured cover of a developer inspiration article card"
-            />
+          />
 
-          <p className="card-informations-title">
-            Developer Inspiration
-          </p>
+          <p className="card-informations-title">Developer Inspiration</p>
           <div className="card-informations-details">
             <p className="card-informations-time-paragraph">
               Time to read this article

@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: center / auto 60% no-repeat #000
+    url("../public/images/illustration.svg");
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+  h1 {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50px;
+    margin: auto;
+    z-index: 999;
+  font-size: 45px;
+  height: 45px;
+  }
+}
+.squares-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  transition: filter;
+  opacity: 0;
+  animation-name: lego;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  .lego-square {
+    opacity: 0;
+    animation-name: lego;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    margin: 0;
+    padding: 0;
+    width: 6vw;
+    height: 6vw;
+    background: rgba(196, 196, 196, 0.01);
+    box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(70px);
+    position: relative;
+    transition: filter;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transform: translate(50%, 50%);
+      margin: auto;
+      width: 50%;
+      height: 50%;
+      background: rgba(196, 196, 196, 0.14);
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25),
+        inset 0px 2px 2px rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+@keyframes lego {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+}
